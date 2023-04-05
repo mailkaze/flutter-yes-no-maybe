@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart';
 import 'package:yes_no_maybe/domain/entities/message.dart';
 
 class HerMessageBubble extends StatelessWidget {
@@ -21,10 +20,10 @@ class HerMessageBubble extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Text(
               message.text,
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             ),
           ),
         ),
@@ -45,7 +44,7 @@ class HerMessageBubble extends StatelessWidget {
 class _ImageBubble extends StatelessWidget {
   final String image;
 
-  const _ImageBubble({super.key, required this.image});
+  const _ImageBubble({required this.image});
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -65,8 +64,8 @@ class _ImageBubble extends StatelessWidget {
             height: 150,
             color: Colors.grey,
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            child: Center(
-                child: const Text('El contacto está enviando una imagen')),
+            child: const Center(
+                child: Text('El contacto está enviando una imagen')),
           );
         },
       ),
